@@ -1,22 +1,15 @@
-// 24MCMT23
-// VELA POOJITHA
-//M.TECH - CS
-
-### Assignment Description: Minimum Spanning Tree (MST) and Parallel MST Using Threads**
-
+Minimum Spanning Tree (MST) and Parallel MST Using Threads**
 
 #### Title: Implementing and Optimizing Minimum Spanning Tree (MST) Algorithms Using Threads
 
-
 #### Objective:  
-This assignment aims to deepen my understanding of graph algorithms by implementing two versions of the **Minimum Spanning Tree (MST)** problem:  
+This project aims to deepen my understanding of graph algorithms by implementing two versions of the **Minimum Spanning Tree (MST)** problem:  
 1. A sequential version of MST using Kruskal's or Prim's algorithm.  
 2. A parallelized version of MST using **Borůvka's Algorithm** with OpenMP for multi-threaded computation.  
 
 You will analyze the performance of both versions, comparing their execution times for various graph sizes and thread counts.
 
-
-### Assignment Tasks
+### Project Tasks
 
 1. Part 1: Sequential MST  
    - Implement **Kruskal's Algorithm** or **Prim's Algorithm** to compute the MST for a given weighted undirected graph.  
