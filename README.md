@@ -53,8 +53,11 @@ Each input graph is a text file with lines like:
 node1 node2 weight
 
 For example:
+
 0 1 10
+
 1 2 20
+
 0 2 5
 
 
@@ -71,7 +74,7 @@ make
 ```
 ---
 
-🖥 Manually
+### 🖥 Manually
 
 or if you want to compile each file manually use the below commands
 ```bash
@@ -81,7 +84,7 @@ gcc pmst_generatelarge_inputs.c -o generator
 ```
 ---
 
-🧪 Running the Programs
+## 🧪 Running the Programs
 
 1. Generate Input Graph
 ```bash
@@ -117,7 +120,7 @@ Cost = 78904
 Time Taken = 0.92 seconds
 
 ---
-🧠 Learnings and Observations
+## 🧠 Learnings and Observations
 
 Parallelism is highly effective in MST when graphs are large.
 
