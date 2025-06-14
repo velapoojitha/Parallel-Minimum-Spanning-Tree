@@ -1,0 +1,181 @@
+// 24MCMT23
+// VELA POOJITHA
+//M.TECH - CS
+
+### Assignment Description: Minimum Spanning Tree (MST) and Parallel MST Using Threads**
+
+
+#### Title: Implementing and Optimizing Minimum Spanning Tree (MST) Algorithms Using Threads
+
+
+#### Objective:  
+This assignment aims to deepen my understanding of graph algorithms by implementing two versions of the **Minimum Spanning Tree (MST)** problem:  
+1. A sequential version of MST using Kruskal's or Prim's algorithm.  
+2. A parallelized version of MST using **Borůvka's Algorithm** with OpenMP for multi-threaded computation.  
+
+You will analyze the performance of both versions, comparing their execution times for various graph sizes and thread counts.
+
+
+### Assignment Tasks
+
+1. Part 1: Sequential MST  
+   - Implement **Kruskal's Algorithm** or **Prim's Algorithm** to compute the MST for a given weighted undirected graph.  
+   - Ensure the program handles basic edge cases like disconnected graphs and duplicate edges.  
+   - Measure and display the execution time of the sequential algorithm.
+
+2. Part 2: Parallel MST  
+   - Implement **Borůvka's Algorithm** for MST using OpenMP for parallel computation.  
+   - Parallelize the process of finding the cheapest edge for each connected component.  
+   - Allow the user to specify the number of threads for the computation.  
+   - Measure and display the execution time of the parallel algorithm with varying thread counts.
+
+3. Performance Comparison  
+   - Test both implementations on graphs of different sizes (small, medium, and large).  
+   - Record execution times for the sequential and parallel versions.  
+   - Analyze the impact of increasing the number of threads on the parallel algorithm’s performance.
+
+4. User Input  
+   - For both versions, allow the user to input:  
+     - Number of vertices V and edges E.  
+     - Edge details: Each edge should be defined as:  
+       
+       source_vertex destination_vertex weight
+       
+     - For the parallel version, allow the user to specify the number of threads.  
+
+5. Output Requirements  
+   - List the edges in the MST with their weights.  
+   - Display the total weight of the MST.  
+   - Output the execution time for both the sequential and parallel versions.
+
+
+
+### Input Format
+1. Number of vertices V : Integer.  
+2. Number of edges  E: Integer.  
+3. List of edges: Each edge consists of three integers:  
+   src dest weight
+4. (Parallel version only) Number of threads to use.
+
+### Output Format
+For both versions:
+1. MST Edges:
+   - List the edges included in the MST with their weights.  
+   Example:
+   
+   Edges in the Minimum Spanning Tree:
+   1 -- 2 == 2
+   0 -- 1 == 4
+   3 -- 4 == 6
+   
+2. Total Weight:
+   - Display the sum of the weights of the MST edges.  
+
+   Example:
+   
+   Total weight of MST: 12
+   
+
+3. Execution Time:
+   - Display the time taken to compute the MST.  
+   Example:
+   
+   Execution time: 0.003215 seconds
+
+
+
+### Evaluation Criteria
+1. Correctness:
+   - Both implementations should compute the correct MST for various graphs.
+   - Handle disconnected graphs and duplicate edges gracefully.
+
+2. Parallelization:
+   - Efficient use of threads in Borůvka's Algorithm.
+   - Scalability with increasing thread counts.
+
+3. Performance Analysis:
+   - Demonstrate clear performance improvements with the parallel algorithm as the graph size and thread count increase.
+   - Compare execution times for sequential and parallel versions.
+
+4. Report:
+   - Include a performance report comparing sequential and parallel implementations.  
+   - Analyze the impact of thread count on execution time for large graphs.  
+
+
+### Sample Run
+
+Input:
+
+Enter the number of vertices: 6
+Enter the number of edges: 8
+Enter the edges (src dest weight):
+0 1 4
+0 2 4
+1 2 2
+1 3 5
+2 3 8
+3 4 6
+4 5 9
+3 5 7
+Enter the number of threads: 4
+
+
+Output for Parallel MST:
+
+Edges in the Minimum Spanning Tree:
+1 -- 2 == 2
+0 -- 1 == 4
+1 -- 3 == 5
+3 -- 4 == 6
+3 -- 5 == 7
+Total weight of MST: 24
+Execution time with 4 threads: 0.002534 seconds
+
+
+Output for Sequential MST:
+
+Edges in the Minimum Spanning Tree:
+1 -- 2 == 2
+0 -- 1 == 4
+1 -- 3 == 5
+3 -- 4 == 6
+3 -- 5 == 7
+Total weight of MST: 24
+Execution time: 0.000024 seconds
+
+For V = 6, E = 8:
+Sequential time :  0.001697seconds
+Execution time for parallel minimum spanning tree with different number of threads:
+Number of threads     Seconds
+       2               0.000246
+       4               0.013327
+       6               0.000479
+       10              0.001894
+       15              0.005129
+       20              0.007006
+       40              0.008116
+
+
+For V = 500, E = 1500.
+Sequential time : 0.000390 seconds
+Execution time for parallel minimum spanning tree with different number of threads:
+Number of threads     Seconds
+       4              0.001558
+       8              0.011334
+       16             0.002033
+       32             0.015087
+       64             0.000917
+       128            0.001415
+       256            0.001583
+       512            0.002155  
+
+
+For V = 1000, E = 10000.
+Sequential time : 0.001557 seconds
+Execution time for parallel minimum spanning tree with different number of threads
+Number of threads     Seconds
+       4              0.010882
+       8              0.012580
+       32             0.002708
+       128            0.002214
+       512            0.009549
